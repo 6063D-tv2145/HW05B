@@ -15,10 +15,8 @@ I took the concept into Procreate, and used the original book illustrations and 
 I think being able to code all of the components I want to + actually making visually appealing illustrations will be a big challenge here. It is almost like I am making a game. I would like the movements to look organic and playful.
 
 **Are there aspects of your project that are related to any of the readings we’ve done?**  
-At first glance, this project makes me think about the interaction reading (might also be a recency bias), but I am wondering whether having people click is considered enough of an interaction, and whether or not I’d even call this interactive?
-
-
-![D0bREb.png](https://imgpile.com/images/D0bREb.png)  
-![D0b5V8.png](https://imgpile.com/images/D0b5V8.png)  
-![D0bdfl.png](https://imgpile.com/images/D0bdfl.png)  
-![D0bwCS.png](https://imgpile.com/images/D0bwCS.png)  
+At first glance, this project makes me think about the interaction reading (might also be a recency bias), but I am wondering whether having people click is considered enough of an interaction, and whether or not I’d even call this interactive?  
+![LittleMole1.png](https://imgpile.com/images/D0bREb.png)  
+![LittleMole2.png](https://imgpile.com/images/D0b5V8.png)  
+![LittleMole3.png](https://imgpile.com/images/D0bdfl.png)  
+![LittleMole4.png](https://imgpile.com/images/D0bwCS.png)  
