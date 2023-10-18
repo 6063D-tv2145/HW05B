@@ -9,9 +9,9 @@ I worked on how (not yet completely) use p5 to recreate the likeness of the litt
 - Sky (solid color)  
 - Sky layer 2 – flickering blues  
 - Plant leaves:
--   Class defining position, height, color, 
--   Function - move (swaying in the wind)
--   Function - draw (stem, leaves)
+  -   Class defining position, height, color, 
+  -   Function - move (swaying in the wind)
+  -   Function - draw (stem, leaves)
   
 - Baby’s breath flower
 -   Class defining position, height, color, 
