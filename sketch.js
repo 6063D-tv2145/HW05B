@@ -1,58 +1,59 @@
-// let = MoleEye;
+// Defining global variables in order to draw the Mole
+let x;
+let y;
+let w;
+let h;
 
-function setup() {
-  createCanvas(800, 1020);
-  background(223, 242, 243);
-  // MoleEyes = new MoleEyes();
+
+function moleRetina (x,y){
+fill ("black")
+ellipse(x-48, y-(y/2.35), 30)
+ellipse(x+48, y-(y/2.35), 30)
+}
+
+function drawMole (x,y,w,h) {
   rectMode(CENTER)
   ellipseMode(CENTER)
+  rectMode()
+
+  //Mole Body
+  fill("black")
+  rect(x, y, w, h, w)
+
+  //Mole Eyes
+  fill("white")
+  strokeWeight(0)
+  ellipse(x-48, y-(y/2.05), 100, 130)
+  ellipse(x+48, y-(y/2.05), 100, 130)
+
+  //Mole Belly
+  fill(217)
+  strokeWeight(0)
+  ellipse(x-64, y-(y/10), 200)
+  ellipse(x+64, y-(y/10), 200)
+  rect (x,y+(y/3.8),w-(w/12),h-(h/1.8),w)
+
+  //Mole Feet
+  fill (255,173,162)
+  strokeWeight (0)
+  arc(x-(x/3.5), y + (y/1.5), 130, 130, PI, 0, CHORD);
+  arc(x+(x/3.5), y + (y/1.5), 130, 130, PI, 0, CHORD);
+
+  //Nose
+  fill("red")
+  ellipse (x,y-(y/3),95,60)
+}
+
+
+function setup() {
+  createCanvas(800, windowHeight);
+  background(223, 242, 243);
 }
 
 function draw() {
-// Mole
-  fill("black")
- rect(width/2, height/2, 350, 565, 180)
+  //Drawing the Mole + Retina
+  drawMole (width/2, height/2, 350, 600)
+  moleRetina (width/2, height/2)
 
-// Eye
-fill("white")
-strokeWeight(0)
-ellipse(350, 366, 98, 130)
-ellipse(350+98, 366, 98, 130)
 
-// Retina
-fill("black")
-strokeWeight(0)
-ellipse(350, 366, 30)
-ellipse(350+98, 366, 30 )
-
-// Cheeks
-fill(217)
-ellipse (329, 493, 180)
-ellipse (329+150, 493, 180)
-
-//belly
-rect()
-rect(width/2, 600, 320, 260, 180)
-
-//nose
-fill("red")
-ellipse (397,430,95,60)
-
-//dirt pile
-fill("brown")
-fill(127, 82, 42); 
 }
-
-// class MoleEyes{
-//   constructor() {
-//     this.eyeColor= ("white")
-//     this.retinaColor = ("black")
-//     this.eyeX= ex
-//     this.eyeY= ey
-//     this.eyeW= ew
-//     this.eyeH= eh
-//     this.retinaX= rx
-//     this.retinaY= ry
-//     this.retinaW= rw
-//   }
-// }
