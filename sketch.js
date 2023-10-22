@@ -21,6 +21,9 @@ let pY2 = 530;
 let pW2 = 225;
 let pH2 = 270;
 
+let validPants = [];
+
+
 function pantRectangleValidity(pantX, pantY, pantW, pantH) {
   if (
     mouseX > pantX && 
@@ -209,6 +212,7 @@ function draw() {
 function mouseDragged() {
   noFill();
   strokeWeight(0);
+  validPants.push({ x: mouseX, y: mouseY })
   rect(pX0, pY0, pW0, pH0);
   rect(pX1, pY1, pW1, pH1);
   rect(pX2, pY2, pW2, pH2);
