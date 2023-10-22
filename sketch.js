@@ -6,6 +6,34 @@ let h;
 
 let speckDiam=40;
 
+let pX0 = 260;
+let pY0 = 500;
+let pW0 = 70;
+let pH0 = 300;
+
+let pX1 = 540;
+let pY1 = 500;
+let pW1 = 70;
+let pH1 = 300;
+
+let pX2 = 400;
+let pY2 = 530;
+let pW2 = 225;
+let pH2 = 270;
+
+function pantRectangleValidity(pantX, pantY, pantW, pantH) {
+  if (
+    mouseX > pantX && 
+    mouseX < pantX + pantW && 
+    mouseY > pantY && 
+    mouseY < pantY + pantH
+    ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function drawFlower (flowerXpos, flowerYpos){
   strokeWeight (9)
   stroke (143, 225, 150,15)
@@ -133,7 +161,7 @@ function draw() {
     let plantAlpha= random(1,8);
     drawPlant(plantXpos, plantYpos, 800, plantAlpha);
   }
-
+ 
   //Drawing the Mole + Retina
   drawMole (width/2, height/2, 350, 600);
 
@@ -160,15 +188,28 @@ function draw() {
   triangle (width, height-(height/5.95), width-(width/3.62), height-(height/5.95),width,height)
 
   moleRetina (width/2, height/2 - 20);  
-
+ 
+  if (pantRectangleValidity(pX0, pY0, pW0, pH0) || pantRectangleValidity(pX1, pY1, pW1, pH1) || pantRectangleValidity(pX2, pY2, pW2, pH2)) {
+    strokeWeight(0);
+    fill("blue");
+    ellipse(mouseX, mouseY, 30, 30);
+  }
+ 
   //sample pant rectangles
-  fill("blue")
+  fill(0,20)
   rect(260,500,70,300,100)
 
-  fill("blue")
+  fill(0,20)
   rect(540,500,70,300,100)
 
-  fill("blue")
-  rect(width/2,530,225,270)
+  fill(0,20)
+  rect(400,530,225,270)
+}
 
+function mouseDragged() {
+  noFill();
+  strokeWeight(0);
+  rect(pX0, pY0, pW0, pH0);
+  rect(pX1, pY1, pW1, pH1);
+  rect(pX2, pY2, pW2, pH2);
 }
