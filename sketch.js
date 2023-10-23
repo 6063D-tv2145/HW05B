@@ -6,23 +6,22 @@ let h;
 
 let speckDiam=40;
 
-let pX0 = 260;
-let pY0 = 500;
-let pW0 = 70;
-let pH0 = 300;
+let pX0;
+let pY0;
+let pW0;
+let pH0;
 
-let pX1 = 540;
-let pY1 = 500;
-let pW1 = 70;
-let pH1 = 300;
+let pX1;
+let pY1;
+let pW1;
+let pH1;
 
-let pX2 = 400;
-let pY2 = 530;
-let pW2 = 225;
-let pH2 = 270;
+let pX2;
+let pY2;
+let pW2;
+let pH2;
 
 let validPants = [];
-
 
 function pantRectangleValidity(pantX, pantY, pantW, pantH) {
   if (
@@ -127,14 +126,15 @@ function drawMole (x,y,w,h) {
   ellipse(x+64, y-(y/10), 200)
   rect (x,y+(y/3.8),w-(w/12),h-(h/1.8),w)
 
-  //Mole Feet
-  fill (255,173,162)
-  arc(x-(x/3.5), y + (y/1.5), 130, 130, 180, 0, CHORD);
-  arc(x+(x/3.5), y + (y/1.5), 130, 130, 180, 0, CHORD);
-
   //Nose
   fill("red")
   ellipse (x,y-(y/3),95,60)
+}
+
+function moleFeet(x,y){
+  fill (255,173,162)
+  arc(x-(x/3.5), y + (y/1.5), 130, 130, 180, 0, CHORD);
+  arc(x+(x/3.5), y + (y/1.5), 130, 130, 180, 0, CHORD);
 }
 
 function drawGround(groundX,groundY){
@@ -191,29 +191,45 @@ function draw() {
   triangle (width, height-(height/5.95), width-(width/3.62), height-(height/5.95),width,height)
 
   moleRetina (width/2, height/2 - 20);  
- 
-  if (pantRectangleValidity(pX0, pY0, pW0, pH0) || pantRectangleValidity(pX1, pY1, pW1, pH1) || pantRectangleValidity(pX2, pY2, pW2, pH2)) {
-    strokeWeight(0);
-    fill("blue");
-    ellipse(mouseX, mouseY, 30, 30);
-  }
- 
+
+  rectMode(CORNER)
   //sample pant rectangles
-  fill(0,20)
-  rect(260,500,70,300,100)
+  for (let i = 0; i < validPants.length; i++) {
+    let pantPoint = validPants[i];
+    fill(65,72,255);
+    ellipse(pantPoint.x, pantPoint.y, 35, 35);
+  }
+  
+  // fill("red")
+  // rect(width/3.45,height/2.4,70,300,100)
 
-  fill(0,20)
-  rect(540,500,70,300,100)
+  // fill("blue")
+  // rect(width-(width/2.65),height/2.4,70,300,100)
 
-  fill(0,20)
-  rect(400,530,225,270)
+  // fill("yellow")
+  // rect(width/2.8,height/2,225,240)
+
+  moleFeet(width/2,height/2)
 }
 
-function mouseDragged() {
-  noFill();
-  strokeWeight(0);
-  validPants.push({ x: mouseX, y: mouseY })
-  rect(pX0, pY0, pW0, pH0);
-  rect(pX1, pY1, pW1, pH1);
-  rect(pX2, pY2, pW2, pH2);
+function mouseMoved() {
+  pX0 = width/3.45;
+  pY0 = height/2.4;
+  pW0 = 70;
+  pH0 = 250;
+
+  pX1 = width-(width/2.65);
+  pY1 = height/2.4;
+  pW1 = 70;
+  pH1 = 250;
+
+  pX2 = width/2.8;
+  pY2 = height/2;
+  pW2 = 225;
+  pH2 = 240;
+
+  if (pantRectangleValidity(pX0, pY0, pW0, pH0) || pantRectangleValidity(pX1, pY1, pW1, pH1) || pantRectangleValidity(pX2, pY2, pW2, pH2)) {
+    validPants.push({ x: mouseX, y: mouseY })
+  }
 }
+
