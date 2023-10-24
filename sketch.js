@@ -24,11 +24,15 @@ let pH2;
 let validPants = [];
 
 function pantRectangleValidity(pantX, pantY, pantW, pantH) {
+  return checkIfinRectangle(pantX, pantY, pantW, pantH, mouseX, mouseY);
+}
+
+function checkIfinRectangle(rectX, rectY, rectW, rectH, pointX, pointY) {
   if (
-    mouseX > pantX && 
-    mouseX < pantX + pantW && 
-    mouseY > pantY && 
-    mouseY < pantY + pantH
+    pointX > rectX && 
+    pointX < rectX + rectW && 
+    pointY > rectY && 
+    pointY < rectY + rectH
     ) {
     return true;
   } else {
@@ -196,8 +200,14 @@ function draw() {
   //sample pant rectangles
   for (let i = 0; i < validPants.length; i++) {
     let pantPoint = validPants[i];
+    if (checkIfinRectangle=(width/2.5,height/2,150,100,pantPoint.x, pantPoint.y))
+    {fill(31,38,153);
+    ellipse(pantPoint.x, pantPoint.y, 35, 35);
+  } else {
     fill(65,72,255);
     ellipse(pantPoint.x, pantPoint.y, 35, 35);
+
+  }
   }
   
   // fill("red")
@@ -208,6 +218,9 @@ function draw() {
 
   // fill("yellow")
   // rect(width/2.8,height/2,225,240)
+
+  // fill("purple")
+  // rect(width/2.5,height/2,150,100)
 
   moleFeet(width/2,height/2)
 }
@@ -228,7 +241,9 @@ function mouseMoved() {
   pW2 = 225;
   pH2 = 240;
 
-  if (pantRectangleValidity(pX0, pY0, pW0, pH0) || pantRectangleValidity(pX1, pY1, pW1, pH1) || pantRectangleValidity(pX2, pY2, pW2, pH2)) {
+  if (pantRectangleValidity(pX0, pY0, pW0, pH0) || 
+    pantRectangleValidity(pX1, pY1, pW1, pH1) || 
+    pantRectangleValidity(pX2, pY2, pW2, pH2)) {
     validPants.push({ x: mouseX, y: mouseY })
   }
 }
