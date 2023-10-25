@@ -1,3 +1,22 @@
+# Interactive Book Cover Part III
+**What I’ve done this week**    
+This week, I shifted the code I wrote last week into variables, and not hard code. I figured out the rest of the code, and I was able to follow last week's plans quite successfully (plants are for loops, flowers are for loops, dirt specks are for loops), except the other animals, which I decided to leave out for the sake of time and also difficulty of making good looking animals from simple shapes. Additionally, an unexpected pivot was the difficulty of executing the trapezoid, but after the discussion with you, I really liked the solution we came up with
+  
+**Description of Interactivity**   
+Eyes move with the mouse, symbolizing the mole looking for someone to help him get a pair of pants.
+  
+The visitor can "paint" over a pant-shaped area on top of the mole, mimicking the creation of pants. I decided to leave the "pocket" color in, because the pockets are an integral part of the story and almost the very reason why the mole wanted the pants, so although I am liking the pants without the pocket, the story is more important. 
+
+Overall I am very happy with the result, the eye movement and especially the brush effect were things that pushed me to gain a deeper understanding of the concepts we've learned. Additionally, trying to think of things in functions, and variables, also encouraged me to think more systematically about the code, and after Tuesday's office hours, I realized that I could be even more general to make the code even more malleable and scalable.
+  
+Below, I am sharing progress visuals from Figma (and one from my notebook), which is where I always start before creating anything visual in p5.js.    
+[![G4iHux.png](https://imgpile.com/images/G4iHux.png)](https://imgpile.com/i/G4iHux)  
+[![G4iVBL.png](https://imgpile.com/images/G4iVBL.png)](https://imgpile.com/i/G4iVBL)  
+[![G4i8f1.png](https://imgpile.com/images/G4i8f1.png)](https://imgpile.com/i/G4i8f1)  
+[![G4ioMj.png](https://imgpile.com/images/G4ioMj.png)](https://imgpile.com/i/G4ioMj)  
+[![G4iqAo.png](https://imgpile.com/images/G4iqAo.png)](https://imgpile.com/i/G4iqAo)  
+[![G4i2jC.jpg](https://imgpile.com/images/G4i2jC.jpg)](https://imgpile.com/i/G4i2jC)  
+  
 # Interactive Book Cover Part II
 **What I’ve done this week**  
 I have solidified my idea and decided to pivot slightly from my proposal last week. I based too much of my proposal on the ability to artistically recreate animals, and I don’t think that is very realistic. My updated idea is that I would like to have a beautifully vibrant nature background, and in the body area of the little mole, I would like to give the user the ability to draw pants on the little mole.

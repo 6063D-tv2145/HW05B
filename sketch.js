@@ -170,7 +170,7 @@ function draw() {
   }
  
   //Drawing the Mole + Retina
-  drawMole (width/2, height/2, 350, 600);
+  drawMole (width/2, height/2, 350, 625);
 
   //Ground
   drawGround(0,height)
