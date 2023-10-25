@@ -200,15 +200,15 @@ function draw() {
   //sample pant rectangles
   for (let i = 0; i < validPants.length; i++) {
     let pantPoint = validPants[i];
-    if (checkIfinRectangle=(width/2.5,height/2,150,100,pantPoint.x, pantPoint.y))
+    if (checkIfinRectangle(width/2.5,height/2,150,100,pantPoint.x, pantPoint.y))
     {fill(31,38,153);
-    ellipse(pantPoint.x, pantPoint.y, 35, 35);
+    ellipse(pantPoint.x, pantPoint.y, 20, 20);
   } else {
     fill(65,72,255);
     ellipse(pantPoint.x, pantPoint.y, 35, 35);
 
   }
-  }
+}
   
   // fill("red")
   // rect(width/3.45,height/2.4,70,300,100)
